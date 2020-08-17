@@ -6,17 +6,347 @@
     android:layout_height="match_parent"
     tools:context=".ui.gallery.GalleryFragment">
 
-    <TextView
-        android:id="@+id/text_gallery"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.521">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:background="@drawable/stroke_bg"
+                    android:contentDescription="CardImageViewDesc"
+                    android:cropToPadding="true"
+                    android:padding="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hb1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="HOSPITAL A"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:text="AA COLONY"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:text="PATNA, BIHAR- XXXXXX"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="100dp"
+                        android:layout_weight="1"
+                        android:background="#f2f5df"
+                        android:src="@drawable/ic_ring_volume_black_24dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Rating: 4.8" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:stepSize="1" />
+
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:background="@drawable/stroke_bg"
+                    android:contentDescription="CardImageViewDesc"
+                    android:cropToPadding="true"
+                    android:padding="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hb2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="HOSPITAL B"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:text="BB COLONY"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:text="PATNA, BIHAR- XXXXXX"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="100dp"
+                        android:layout_weight="1"
+                        android:background="#f2f5df"
+                        android:src="@drawable/ic_ring_volume_black_24dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Rating: 4.7" />
+
+
+                <RatingBar
+                    android:id="@+id/ratingBar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:background="@drawable/stroke_bg"
+                    android:contentDescription="CardImageViewDesc"
+                    android:cropToPadding="true"
+                    android:padding="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hb3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="HOSPITAL C"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:text="CC COLONY"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:text="PATNA, BIHAR- XXXXXX"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="100dp"
+                        android:layout_weight="1"
+                        android:background="#f2f5df"
+                        android:src="@drawable/ic_ring_volume_black_24dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Rating: 4.9" />
+
+
+                <RatingBar
+                    android:id="@+id/ratingBar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:background="@drawable/stroke_bg"
+                    android:contentDescription="CardImageViewDesc"
+                    android:cropToPadding="true"
+                    android:padding="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hb4" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="HOSPITAL D"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:text="DD COLONY"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:text="PATNA, BIHAR- XXXXXX"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="100dp"
+                        android:layout_weight="1"
+                        android:background="#f2f5df"
+                        android:src="@drawable/ic_ring_volume_black_24dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Rating: 4.6" />
+
+
+                <RatingBar
+                    android:id="@+id/ratingBar5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+
+
 </android.support.constraint.ConstraintLayout>
